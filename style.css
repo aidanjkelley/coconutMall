@@ -1,0 +1,178 @@
+@font-face {
+  font-family: 'pixelFont'; /* Provide a name for your custom font */
+  src: url('static/pixelFont.ttf'); /* Replace with the path to your font file */
+}
+
+* body, html{
+  background-image: url(/static/pixelRiver.gif);
+  background-size: cover;
+  font-family: 'pixelFont';
+}
+
+.scroll-container {
+  overflow-x: auto;
+}
+
+.container{
+  display:grid;
+  height: 100vh;
+  grid-template-columns: 0.6fr 1fr 1fr 1fr; 
+  grid-template-rows: 1.fr 1.5fr 1.2fr 0.8fr;
+  margin: 6% 6% 0% 3%;
+ 
+  grid-template-areas: 
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer";
+  grid-gap: 0.4rem;
+}
+
+nav {
+  background: linear-gradient(to bottom, rgb(238, 235, 187), rgb(228, 228, 183));
+  border: 2px solid black;
+  grid-area: nav;
+  padding: -2% 2% 2% 2%;
+  overflow: hidden;
+  display: flex; /* Use flexbox to manage the images */
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+  align-items: center; /* Align items at the top of the flex container */
+}
+
+.image1 {
+  flex: 0 0 100%; /* Set the flex property to 100% for the first image to take up the entire space */
+  max-width: 50%; /* Set the maximum width for the first image to 100% */
+  height: 80%; /* Allow the height of the first image to adjust accordingly */
+}
+
+.image2 {
+  flex: 0 0 60%; /* Set the flex property to 60% for the second image to take up 60% of the space */
+  max-width: 45%; /* Set the maximum width for the second image to 50% */
+  height: 115%; /* Allow the height of the second image to adjust accordingly */
+}
+main {
+  position: relative;
+  grid-area: main;
+  overflow-y: auto;
+  overflow-x: auto;
+  padding: 5px 15px 15px 15px;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgb(238, 235, 187), rgb(228, 228, 183));
+  border: 2px solid black;
+}
+
+h1 {
+  font-size: 100%;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.text {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(69, 137, 240);
+  font-weight: 500;
+}
+
+.overlay-image {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 2800px;
+  height: 100%;
+  background: linear-gradient(to bottom, white, yellow);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid black; /* Add border to the overlay image */
+  box-shadow: 5px 5px 5px grey; /* Add box shadow to the overlay image */
+}
+
+.images {
+  height: 100%;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 2px solid black; /* Add border to the images */
+}
+
+#sidebar {
+  background: rgb(235, 234, 178);
+  grid-area: sidebar;
+  border: 2px solid black; /* Add border to the sidebar */
+  padding: 10%;
+  overflow-x: auto;
+}
+
+
+
+#content1 {
+  background-color: green;
+  border: 2px solid black;
+  overflow: auto; /* Enable scrolling if the content overflows */
+}
+
+.content-image {
+  max-width: 80%; /* Set the maximum width for the images */
+  max-height: 100%; /* Set the maximum height for the images */
+  display: block; /* Ensure the images are displayed as blocks */
+  margin-bottom: 10px; /* Add margin at the bottom of the images for spacing */
+  padding: 5px;
+}
+#content2 {
+  background: orange;
+  overflow: auto;
+  grid-area: content2;
+  border: 2px solid black; /* Add border to the content2 */
+}
+
+#content3 {
+  background: grey;
+  overflow: auto;
+  grid-area: content3;
+  border: 2px solid black; /* Add border to the content3 */
+}
+
+.content-image2 {
+  max-width: 80%; /* Set the maximum width for the images */
+  max-height: 100%; /* Set the maximum height for the images */
+  display: block; /* Ensure the images are displayed as blocks */
+  margin-bottom: 10px; /* Add margin at the bottom of the images for spacing */
+  padding: 5px;
+
+}
+
+.content-image3 {
+  max-width: 80%; /* Set the maximum width for the images */
+  max-height: 100%; /* Set the maximum height for the images */
+  display: block; /* Ensure the images are displayed as blocks */
+  margin-bottom: 10px; /* Add margin at the bottom of the images for spacing */
+  padding: 5px;
+
+}
+
+.Coconut {
+  height: 70px;
+}
+
+.blockParty{
+  border: solid rgb(161, 161, 63) 8px;
+  border-radius: 8px;
+}
+
+footer {
+  background: rgb(235, 234, 178);
+  grid-area: footer;
+  border: 2px solid black;
+  overflow-x: auto; /* Set overflow-x to auto to enable horizontal scrolling */
+  padding: 6px;
+  display: flex; /* Set display to flex to enable flexbox properties */
+  justify-content: center;
+}
+
+.content-image4 {
+  max-width: 100%;
+  max-height: 150%;
+  display: inline-block; /* Change display to inline-block to enable horizontal display */
+  margin-bottom: 10px;
+  padding: 2px;
+}
+
